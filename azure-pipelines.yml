@@ -22,4 +22,10 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
     
-- task: PublishBuildArtifacts@1
+- publish: $(System.DefaultWorkingDirectory)/bin/WebApp
+  artifact: WebApp
+
+- download: current
+  artifact: WebApp
+  patterns: |
+    **/*.zip
