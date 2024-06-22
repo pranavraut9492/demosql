@@ -24,7 +24,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-        azureSubscription: 'Azure for Students (a0a98bce-4dc4-493d-8bc2-bc92b55f7666)'
+        azureSubscription: 'subscription_key'
         appType: 'webAppLinux'
         appName: 'my-sql-new-app'
         package: '$(System.DefaultWorkingDirectory)/**/*.zip'
